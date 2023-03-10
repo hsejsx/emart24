@@ -1,0 +1,67 @@
+.gnb {
+  flex-basis: 80%;
+
+  &-list {
+    @include flexbox;
+    position: relative;
+
+    &:hover,
+    &:focus-within {
+      .gnb-list-bg,
+      .lnb {
+        display: block;
+      }
+    }
+  }
+
+  &-list-bg {
+    position: absolute;
+    top: 100%;
+    display: none;
+    width: 200%;
+    height: 22.8rem;
+    opacity: 0.5;
+    @include get-color(background-color, bg-gnb-list);
+  }
+
+  &-list-item {
+    position: relative;
+
+    & > a {
+      @include flexbox;
+      @include text-style(17);
+      padding: 2.5rem 4rem;
+      font-weight: 500;
+      white-space: nowrap;
+      transition: color 200ms ease-in-out;
+    }
+
+    &:hover,
+    &:focus-within {
+      & > a {
+        @include get-color(color, primary-color);
+      }
+    }
+
+    .lnb {
+      position: absolute;
+      top: 110%;
+      left: 50%;
+      display: none;
+      white-space: nowrap;
+      transform: translateX(-50%);
+
+      a {
+        @include flexbox;
+        @include text-style(15);
+        @include get-color(color, color-white);
+        padding: 1rem;
+
+        &:hover,
+        &:focus {
+          @include get-color(color, primary-color);
+        }
+      }
+    }
+  }
+}

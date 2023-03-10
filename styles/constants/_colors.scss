@@ -8,8 +8,12 @@ $color-yellow-light: #fece6a;
 $color-orange: #f95a00;
 $color-white: #fff;
 
+$bg-gnb-menu-list: #fff7e5;
+$border-gnb-menu-list: #ffedc3;
+
 $colors: (
   light: (
+    primary-color: $color-yellow,
     text-color-dark: $color-dark,
     text-color-default: $color-dark-light,
     text-color-light: $color-black,
@@ -17,8 +21,12 @@ $colors: (
     background-color-default: $color-gray,
     background-color-light: $color-white,
     border-color-default: $color-gray-light,
+    color-white: $color-white,
+    bg-gnb-menu-list: $bg-gnb-menu-list,
+    border-gnb-menu-list: $border-gnb-menu-list,
   ),
   dark: (
+    primary-color: $color-yellow,
     text-color-dark: $color-dark,
     text-color-default: $color-dark-light,
     text-color-light: $color-black,
@@ -26,5 +34,8 @@ $colors: (
     background-color-default: $color-gray,
     background-color-light: $color-white,
     border-color-default: $color-gray-light,
+    color-white: $color-white,
+    bg-gnb-menu-list: $bg-gnb-menu-list,
+    border-gnb-menu-list: $border-gnb-menu-list,
   ),
 );

@@ -1,0 +1,30 @@
+$color-black: #000;
+$color-dark: #333;
+$color-dark-light: #9a9a9a;
+$color-gray: #f4f4f4;
+$color-gray-light: #eaeaea;
+$color-yellow: #f9bb00;
+$color-yellow-light: #fece6a;
+$color-orange: #f95a00;
+$color-white: #fff;
+
+$colors: (
+  light: (
+    text-color-dark: $color-dark,
+    text-color-default: $color-dark-light,
+    text-color-light: $color-black,
+    background-color-dark: $color-yellow,
+    background-color-default: $color-gray,
+    background-color-light: $color-white,
+    border-color-default: $color-gray-light,
+  ),
+  dark: (
+    text-color-dark: $color-dark,
+    text-color-default: $color-dark-light,
+    text-color-light: $color-black,
+    background-color-dark: $color-yellow,
+    background-color-default: $color-gray,
+    background-color-light: $color-white,
+    border-color-default: $color-gray-light,
+  ),
+);

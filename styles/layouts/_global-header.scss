@@ -40,4 +40,19 @@
       }
     }
   }
+
+  @include responsive(D) {
+    justify-content: center;
+    height: 11.8rem;
+
+    .title {
+      position: static;
+      flex-basis: 10%;
+      transform: none;
+    }
+
+    .box {
+      flex-basis: 10%;
+    }
+  }
 }

@@ -11,6 +11,8 @@ $color-white: #fff;
 $bg-gnb-menu-list: #fff7e5;
 $border-gnb-menu-list: #ffedc3;
 
+$bg-gnb-list: $color-black;
+
 $colors: (
   light: (
     primary-color: $color-yellow,
@@ -24,6 +26,7 @@ $colors: (
     color-white: $color-white,
     bg-gnb-menu-list: $bg-gnb-menu-list,
     border-gnb-menu-list: $border-gnb-menu-list,
+    bg-gnb-list: $bg-gnb-list,
   ),
   dark: (
     primary-color: $color-yellow,
@@ -37,5 +40,6 @@ $colors: (
     color-white: $color-white,
     bg-gnb-menu-list: $bg-gnb-menu-list,
     border-gnb-menu-list: $border-gnb-menu-list,
+    bg-gnb-list: $bg-gnb-list,
   ),
 );

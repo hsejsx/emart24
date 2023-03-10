@@ -1,15 +1,55 @@
-// @mixin text-style-12() {
-//   font-size: $font-size-12;
-//   line-height: $line-height-12;
-//   letter-spacing: $letter-spacing-12;
-// }
+@mixin text-style-12() {
+  font-size: $font-size-12;
+}
 
-// @mixin text-style($size, $color: false) {
-//   @if ($size == 12) {
-//     @include text-style-12;
-//   }
+@mixin text-style-14() {
+  font-size: $font-size-14;
+}
 
-//   @if (type-of($color) == color) {
-//     color: $color;
-//   }
-// }
+@mixin text-style-15() {
+  font-size: $font-size-15;
+}
+
+@mixin text-style-17() {
+  font-size: $font-size-17;
+}
+
+@mixin text-style-18() {
+  font-size: $font-size-18;
+}
+
+@mixin text-style-38() {
+  font-size: $font-size-38;
+}
+
+@mixin text-style($size, $color: false) {
+  line-height: $line-height;
+  letter-spacing: $letter-spacing;
+
+  @if ($size == 12) {
+    @include text-style-12;
+  }
+
+  @if ($size == 14) {
+    @include text-style-14;
+  }
+
+  @if ($size == 15) {
+    @include text-style-15;
+  }
+
+  @if ($size == 17) {
+    @include text-style-17;
+  }
+
+  @if ($size == 18) {
+    @include text-style-18;
+  }
+
+  @if ($size == 38) {
+    @include text-style-38;
+  }
+  @if (type-of($color) == color) {
+    color: $color;
+  }
+}

@@ -4,6 +4,7 @@
   &-list {
     @include flexbox;
     position: relative;
+    z-index: $gnb-list-level;
 
     &:hover,
     &:focus-within {

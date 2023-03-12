@@ -16,28 +16,10 @@
   .logo {
     display: inline-block;
 
-    .white {
-      display: none;
-    }
-
     img {
       display: block;
       width: auto;
       height: 2rem;
-    }
-  }
-
-  &.is-open {
-    @include get-color(background-color, background-color-dark);
-
-    .logo {
-      .basic {
-        display: none;
-      }
-
-      .white {
-        display: block;
-      }
     }
   }
 

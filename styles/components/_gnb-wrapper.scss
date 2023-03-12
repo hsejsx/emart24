@@ -6,10 +6,6 @@
     height: 2.4rem;
     font-size: 1.6rem;
     @include get-color(color, primary-color);
-
-    .is-close {
-      display: none;
-    }
   }
 
   .gnb-menu {

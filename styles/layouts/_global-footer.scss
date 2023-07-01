@@ -1,0 +1,125 @@
+.global-footer {
+  padding: 1rem;
+  background-color: $color-gray;
+
+  .header {
+    @include column-flexbox(start, start);
+  }
+
+  .desc-list {
+    @include column-flexbox(start, start);
+  }
+
+  .desc-item,
+  .btn-site {
+    font-size: 1.4rem;
+  }
+
+  .desc-item {
+    margin-bottom: 0.8rem;
+  }
+
+  .main {
+    @include flexbox(between);
+    margin: 1.8rem 0;
+    font-size: 1.4rem;
+  }
+
+  .etc-list {
+    @include flexbox(end);
+  }
+
+  .etc-item {
+    margin-right: 0.8rem;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    a {
+      @include flexbox;
+      width: 3.2rem;
+      height: 3.2rem;
+      background-color: $color-white;
+      border-radius: 50%;
+      border: 0.1rem solid transparent;
+
+      &:active,
+      &:hover {
+        border-color: $color-primary;
+      }
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    &.is-tiktok {
+      img {
+        width: 60%;
+        height: 60%;
+      }
+    }
+  }
+
+  .info {
+    @include column-flexbox(start, start);
+  }
+
+  .info > div {
+    @include flexbox(start);
+    flex-wrap: wrap;
+  }
+
+  .info-item {
+    @include flexbox(start);
+    margin-bottom: 0.8rem;
+    font-size: 1.2rem;
+    color: $color-text-light;
+
+    &:not(:last-child)::after {
+      padding: 0 0.2rem;
+      content: '/';
+    }
+
+    dt::after {
+      padding: 0 0.2rem;
+      content: ':';
+    }
+  }
+
+  .copy {
+    font-size: 1.2rem;
+    color: $color-text-light;
+  }
+
+  @include responsive(T) {
+    padding: 6rem 1.5rem;
+
+    .header {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    .desc-list {
+      flex-direction: row;
+    }
+
+    .desc-item {
+      margin-bottom: 0;
+
+      &:not(:last-child):after {
+        padding: 0 0.4rem;
+        content: '|';
+        color: $color-text-light;
+      }
+    }
+
+    .main {
+      margin: 3rem 0;
+    }
+  }
+}

@@ -1,0 +1,130 @@
+.global-header {
+  position: fixed;
+  top: 0;
+  z-index: $global-header-level;
+  width: 100%;
+  height: $global-header-sm;
+  background-color: $color-white;
+
+  .title {
+    @include pos-center;
+  }
+  .logo {
+    display: block;
+    height: 2rem;
+
+    img {
+      display: block;
+      width: auto;
+      height: 100%;
+    }
+  }
+
+  .btn-menu {
+    @include pos-center-y;
+    @include flexbox;
+    right: 0.4rem;
+    width: 4.4rem;
+    height: 4.4rem;
+    font-size: 1.8rem;
+    color: $color-primary;
+  }
+
+  @include responsive(T) {
+    height: $global-header-md;
+    padding: 0 2.4rem;
+
+    .container {
+      height: 100%;
+    }
+
+    .wrapper {
+      @include flexbox(start);
+      height: 100%;
+    }
+
+    .title {
+      flex-basis: 20%;
+      position: static;
+      margin-right: 1.4rem;
+      transform: none;
+    }
+
+    .nav {
+      flex-basis: 80%;
+
+      &:hover {
+        .nav-bg {
+          transform: scaleY(1);
+        }
+
+        .sub-list {
+          opacity: 1;
+          visibility: visible;
+        }
+      }
+    }
+
+    .nav-list {
+      @include flexbox(start);
+      font-size: 1.8rem;
+      font-weight: 500;
+      white-space: nowrap;
+    }
+
+    .nav-item {
+      position: relative;
+      $padding: 2rem;
+      margin-right: 4.2rem - $padding;
+
+      a {
+        @include flexbox;
+        padding: 1rem $padding;
+      }
+
+      &:hover {
+        color: $color-primary;
+      }
+    }
+
+    .sub-list {
+      @include pos-center-x;
+      @include column-flexbox;
+      top: $global-header-md;
+      white-space: nowrap;
+      z-index: 1;
+      font-weight: normal;
+      color: $color-white;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 200ms ease-in-out;
+
+      li:hover {
+        color: $color-primary;
+      }
+    }
+
+    .nav-bg {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      height: 30rem;
+      background-color: #4e5059dd;
+      transform-origin: top;
+      transform: scaleY(0);
+      transition: transform 200ms ease-in-out;
+    }
+  }
+
+  @include responsive(D) {
+    .wrapper {
+      padding-left: 4.8rem;
+    }
+
+    .nav-item {
+      $padding: 3rem;
+      margin-right: 7.2rem - $padding;
+    }
+  }
+}
